@@ -18,9 +18,25 @@ print(num)
 
 
 print('hola mundo')
-print('escriu la teva edat')
-edat=input()
-print('Tienes',edat,'años')
+print('en quin any vas neixer?')
+any_neixement=input()
+print('Tienes', any_neixement,'anys')
+year=input('any_neixement')
+float_any_neixement=float(2026-int(any_neixement))
+variable1='57'
+print(variable1)
+print(2+2)
+#print(2+variable1)
+variable2=int(variable1)
+print(variable2)
+print(2+variable2)
+year=int(input('quin any vas neixer?\n'))
+
+print('Hola',nom,'tens',2026-year,'anys')
+
+print('HOLA MUNDO!')
+
+#Siempre en nuestros corazones
 
 
 
@@ -29,4 +45,3 @@ print('Tienes',edat,'años')
 
 
 
-print('')
