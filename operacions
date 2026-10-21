@@ -1,11 +1,30 @@
 print('posa dos números')
 num=input('el primer número\n')
 num2=input('el segon número\n')
-print(f'La suma és: {int(num) + int(num2)}')
-print(f'La resta és: {int(num) - int(num2)}')
-print(f'La resta és: {int(num2) - int(num)}')
-print(f'La multiplicació és: {int(num) * int(num2)}')
-print(f'La divisió és: {int(num) / int(num2)}')
-print(f'El mòdul és: {int(num) % int(num2)}')
-print(f'La potència és: {int(num) ** int(num2)}')
-print(f'La divisió entera és: {int(num) // int(num2)}')
+print(f'totes les operacions amb {num} i {num2} són: {int(num) + int(num2)}, {int(num) - int(num2)}, {int(num2) - int(num)}, {int(num) * int(num2)}, {int(num) / int(num2)}, {int(num) % int(num2)}, {int(num) ** int(num2)}, {int(num) // int(num2)}')
+
+# Operacions amb caracters
+
+t1=input('posa un text\n')
+t2=input('posa un altre text\n')
+print('\n\033[4mOperacions amb caracters:\033[0m\n')
+print('concatenar:',t1+t2,'\n')
+print('multipicacio:',t1*3,'\n')
+
+num=1
+num=2
+print(num)
+
+num= num + 1
+print(num)
+num+= 1
+print(num)
+
+print('El primer número és', num)
+print('El segon número és', num+1)
+print('ara el primer número és', num+1, 'i el segon número és', num)
+print('la primera variable val:',num,'\n')
+print('la segona variable val:',num2,'\n')
+aux=num
+num=num2
+num2=aux
