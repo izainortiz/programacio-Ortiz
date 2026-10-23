@@ -1,0 +1,41 @@
+
+n1=int(input('el primer número\n'))
+n2=int(input('el segon número\n'))
+
+if(n1+n2>10):{
+    print('la seva suma és més gran que 10')
+}
+else: {
+    print('la seva suma és més petita que 10')
+}
+
+
+
+if(n1+n2 > 8):
+    print('la seva suma és més gran que 8 o més petita que 4')
+
+if(n1+n2<4):
+    print('la seva suma és més gran que 8 o més petita que 4')
+
+
+#operador or (o)
+if (n1+n2 > 8 or n1+n2 < 4):{
+    print('la seva suma és més gran que 8 o més petita que 4')
+}
+
+
+
+
+
+
+
+#if(n1+n2>10):
+ #   print('la seva suma és més gran que 10')
+#else: 
+   # print('la seva suma és més petita que 10')
+
+
+#if(n1+n2>10):print('la seva suma és més gran que 10')
+
+
+
