@@ -35,7 +35,27 @@ if (n1+n2 > 8 or n1+n2 < 4):{
    # print('la seva suma és més petita que 10')
 
 
-#if(n1+n2>10):print('la seva suma és més gran que 10')
+if(n1+n2 > 8):
+    print('la seva suma és més gran que 8 o més petita que 4')
+#operador and (i)
+if(n1+n2 > 12 and n1+n2 < 18):
+    print('la seva suma és més gran que 12 i més petita que 18')
+
+
+#operador not (no)
+if not(n1+n2==13):{
+    print('la seva suma no és 13')
+}
+elif(n1+n2==15):{
+    print('la seva suma és 15')
+}
+
+
+
+
+
+
+
 
 
 
