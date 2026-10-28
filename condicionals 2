@@ -3,8 +3,8 @@ n2=int(input('el segon número\n'))
 
 print('com ho vols fer?')
 
-print('normal')
-print('del reves')
+print('n1 i n2')
+print('n2 i n1')
 
 
 if(input()=='normal'):
