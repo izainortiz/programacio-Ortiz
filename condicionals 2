@@ -1,6 +1,15 @@
 n1=int(input('el primer número\n'))
 n2=int(input('el segon número\n'))
 
+print('com ho vols fer?')
+
+print('normal')
+print('del reves')
+
+
+if(input()=='normal'):
+    print('el primer número és',n1)
+    print('el segon número és',n2)
 print('que vols fer?')
 print('1. Sumar')
 print('2. Restar')
@@ -24,6 +33,31 @@ elif(opcio==6):
     print('el seu resultat de l\'elevar és',n1**n2)
 elif(opcio==7):
     print('la seva divisió entera és',n1//n2)
+
+if(input()=='del reves'):
+    print ('que vols fer?')
+print('1. Sumar')
+print('2. Restar')
+print('3. Multiplicar')
+print('4. Dividir')
+print('5. Mòdul')
+print('6. elevar')
+print('7. divisio entera')
+if(opcio==1):
+    print('la seva suma és',n2+n1)
+elif(opcio==2):
+    print('la seva resta és',n2-n1)
+elif(opcio==3):
+    print('la seva multiplicació és',n2*n1)
+elif(opcio==4):
+    print('la seva divisió és',n2/n1)
+elif(opcio==5):
+    print('el seu mòdul és',n2%n1)
+elif(opcio==6):
+    print('el seu resultat de l\'elevar és',n2**n1)
+elif(opcio==7):
+    print('la seva divisió entera és',n2//n1)
+
 
 
 
