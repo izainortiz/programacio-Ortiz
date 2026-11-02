@@ -6,8 +6,8 @@ print('com ho vols fer?')
 print ('normal',n1 , n2)
 print ('inversa',n2 , n1)
 
-
-if(input()=='n1 , n2'):
+resposta=input()
+if(resposta=='normal'):
     print('el primer número és',n1)
     print('el segon número és',n2)
 print('que vols fer?')
@@ -34,9 +34,7 @@ elif(opcio==6):
 elif(opcio==7):
     print('la seva divisió entera és',n1//n2)
 
-if(input()=='n2 , n1'):
-    print('el primer número és',n2)
-    print('el segon número és',n1)
+
 print ('que vols fer?')
 print('1. Sumar')
 print('2. Restar')
