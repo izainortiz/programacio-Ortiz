@@ -11,8 +11,10 @@ print(matriu[0])
 print(len(llista))
 print(len(matriu))
 
+llista = [2,3]+[4,6,9]
+print(llista)
 
-
+print(llista[1:3])
 
 
 
