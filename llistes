@@ -16,5 +16,5 @@ print(llista)
 
 print(llista[1:3])
 
-
-
+llista[2] = 'gat'
+print(llista)
