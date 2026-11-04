@@ -7,3 +7,12 @@ matriu = [[1,11,111],[2,22,222]]
 
 print(matriu[1][2])
 print(matriu[0])
+
+print(len(llista))
+print(len(matriu))
+
+
+
+
+
+
