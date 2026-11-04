@@ -2,3 +2,8 @@ llista = [2,'hola',3.5]
 print(llista[0])
 print(llista[1])
 print(llista[2])
+
+matriu = [[1,11,111],[2,22,222]]
+
+print(matriu[1][2])
+print(matriu[0])
