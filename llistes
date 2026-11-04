@@ -22,5 +22,7 @@ print(llista)
 del llista[2]
 print(llista)
 
+llista[2] =''
+print(llista)
 
 
