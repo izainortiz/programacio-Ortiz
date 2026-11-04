@@ -1,0 +1,4 @@
+llista = [2,'hola',3.5]
+print(llista[0])
+print(llista[1])
+print(llista[2])
