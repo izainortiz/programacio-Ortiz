@@ -35,7 +35,8 @@ if lletra[int(sum(residu)%23)] == dni[-1]:
 if lletra[int(sum(residu)%23)] != dni[-1]:
     print('el teu DNI és incorrecte')
 
-
+llista.insert (1,'gos')
+print(llista)
 
 
 
