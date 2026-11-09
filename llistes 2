@@ -1,0 +1,26 @@
+
+llista1 = int(input('un número'))
+llista2 = int(input('un altre número'))
+llista3 = int(input('un altre número'))
+llista4 = int(input('un altre número'))
+
+llista = [llista1, llista2, llista3, llista4]
+
+print (llista[0])
+print (llista[1])
+print (llista[2])
+print (llista[3])
+
+print('ordenar la llista de menor a major')
+if llista[0] > llista[1]:
+    llista[0], llista[1] = llista[1], llista[0]
+if llista[1] > llista[2]:
+    llista[1], llista[2] = llista[2], llista[1]
+if llista[2] >  llista[3]:
+    llista[2], llista[3] = llista[3], llista[2]
+
+
+
+
+
+
