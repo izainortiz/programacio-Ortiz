@@ -1,4 +1,6 @@
 
+
+
 print("Hola, este es un ejemplo de bucles en Python.")
 print("Vamos a ordenar una lista de números ingresados por el usuario.")
 print("Por favor, ingrese tres números.")
@@ -28,9 +30,29 @@ print("\n")
 
 compt = 0
 for i in llista[0]:
-    if i == 'a':
-        compt = +1
-        print('la lletra a apareix',compt,'vegades')
+    if (i == 'a'):
+        compt+=1
+print('El primer nom de la llista és', llista[0], 'i té', compt, 'lletres a.')
+
+
+notes = [[6, 6, 7, 10, 9], [10, 7, 6, 7, 7],[5, 5, 10, 7, 10]]
+compt = 0
+for i in notes:
+    for j in i:
+        if (j == 10):
+            compt+=1
+print('Hi ha' ,compt, 'deus (10) a la classe.')
+
+if (compt >= 0):
+    print('Estan asseguts:')
+    for i in range(3):
+        for j in range(5):
+            if (notes[i][j] == 10):
+                print('En la fila',i,'columna',j)
+    
+
+
+
     
 
 
