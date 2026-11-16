@@ -51,7 +51,16 @@ if (compt >= 0):
                 print('En la fila',i,'columna',j)
     
 
+secret = 7
 
+while True:
+    print("Adivina el número secreto (entre 1 y 10):")
+    guess = int(input())
+    if guess == secret:
+        print("¡Felicidades! Has adivinado el número secreto.")
+        break
+    else:
+        print("Intenta de nuevo.")
 
     
 
