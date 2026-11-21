@@ -12,8 +12,9 @@ print('Cada color representa una letra del código secreto.\n')
 print('El código secreto tiene cuatro letras y puede contener letras repetidas.\n')
 # Ahora si empieza el juego
 intentos = 10
-
-codigo_secreto = codigo_usuario = ''
+colores = ['rojo', 'azul', 'verde', 'amarillo', 'naranja', 'morado']  
+codigo_secreto = ('verde rojo morado naranja')  # Ejemplo de código secreto
+codigo_usuario = ''
 while intentos > 0:
     print('Tienes', intentos, 'intentos restantes.\n')
     print('Por favor, ingresa tu intento de código secreto (por ejemplo: verde rojo morado naranja):\n')
@@ -25,6 +26,10 @@ while intentos > 0:
         print('Lo siento, ese no es el código secreto. Intenta de nuevo.\n')
         intentos -= 1
         print('Te quedan', intentos, 'intentos.\n')
+else:
+    codigo_secreto = [False, False, False, False]  # Inicializar la lista de pistas
+    codigo_usuario = [False, False, False, False]  # Inicializar la lista de pistas
+    correctas = 0    # bola negra
 
 
 
@@ -32,9 +37,6 @@ while intentos > 0:
 
 
 
-
-
-codigo_secreto = 'rojo azul verde amarillo'
 
 
 
