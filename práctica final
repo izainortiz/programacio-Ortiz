@@ -10,19 +10,19 @@ print('Después de cada intento, recibirás pistas sobre si tu número es demasi
 print('Tienes seis colores para elegir: rojo, azul, verde, amarillo, naranja y morado.\n')
 print('Cada color representa una letra del código secreto.\n')
 print('El código secreto tiene cuatro letras y puede contener letras repetidas.\n')
-
+print('El método de pistas es asi: si está bien pondra este simbolo ● , si está semibien este simbolo ○ y por último si está mal pondrá este símbolo ·.\n')
 # Ahora si empieza el juego
 intentos = 10
 colores = ['rojo', 'azul', 'verde', 'amarillo', 'naranja', 'morado']  
 codigo_secreto = ['verde', 'rojo', 'morado', 'naranja']
 codigo_usuario = ''
-
+# juego
 while intentos > 0:
     print('Tienes', intentos, 'intentos restantes.\n')
     print('Por favor, ingresa tu intento de código secreto (por ejemplo: verde rojo morado naranja):\n')
     codigo_usuario = input()
     
-    # 1. Separar las palabras del usuario
+    # se separan las respuestas
     lista_usuario = []
     palabra_actual = ''
     for letra in codigo_usuario:
@@ -36,7 +36,7 @@ while intentos > 0:
     if palabra_actual != '':
         lista_usuario.append(palabra_actual)
 
-    # 2. Comprobar longitud y aciertos
+    #comprueba como esta
     if len(lista_usuario) != 4:
         print('El código debe tener exactamente cuatro colores.\n')
     else:
@@ -49,7 +49,7 @@ while intentos > 0:
                 if codigo_usuario[i] == codigo_secreto[i]:
                     pista = pista + '●'
                 elif lista_usuario[i] in codigo_secreto:
-                    pista = pista + '○ '
+                    pista = pista + '○'
                 else:
                     pista = pista + '·'
             print('Incorrecto. Tus pistas son:',pista, '\n')
