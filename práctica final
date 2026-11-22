@@ -44,11 +44,15 @@ while intentos > 0:
             print('Felicidades, has adivinado el código secreto.\n')
             intentos = 0
         else:
-            aciertos = 0
+            pista = ''
             for i in range(4):
-                if lista_usuario[i] == codigo_secreto[i]:
-                    aciertos = aciertos + 1
-            print('Incorrecto. Has acertado', aciertos, 'colores en su posición correcta.\n')
+                if codigo_usuario[i] == codigo_secreto[i]:
+                    pista = pista + '●'
+                elif lista_usuario[i] in codigo_secreto:
+                    pista = pista + '○ '
+                else:
+                    pista = pista + '·'
+            print('Incorrecto. Tus pistas son:',pista, '\n')
             intentos = intentos - 1
             if intentos == 0:
                 print('Te has quedado sin intentos. Has perdido.')
