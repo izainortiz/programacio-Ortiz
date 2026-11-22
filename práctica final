@@ -20,64 +20,27 @@ while intentos > 0:
     print('Por favor, ingresa tu intento de código secreto (por ejemplo: verde rojo morado naranja):\n')
     codigo_usuario = input()
     if codigo_usuario == codigo_secreto:
-        print('¡Felicidades! Has adivinado el código secreto.')
-        break
-    else:
-        print('Lo siento, ese no es el código secreto. Intenta de nuevo.\n')
-        intentos -= 1
-        print('Te quedan', intentos, 'intentos.\n')
-        # Separar los colores sin definir una función dentro del bucle.
-        secreto = codigo_secreto.split()
-        intento = codigo_usuario.lower().split()
-        if len(intento) != 4:
-            print('El código debe tener exactamente cuatro colores.\n')
-            continue
-        correctas = 0
-        semicorrectas = 0
-        secreto_contado = [False, False, False, False]
-        intento_correcto = [False, False, False, False]
-
-        # Primero contamos los colores en la posición correcta.
-        for i in range(4):
-            if intento[i] == secreto[i]:
-                correctas += 1
-                secreto_contado[i] = True
-                intento_correcto[i] = True
-
-        # Después contamos colores correctos en una posición distinta.
-        for i in range(4):
-            encontrado = False
-            for j in range(4):
-                if intento_correcto[i] == False and secreto_contado[j] == False and intento[i] == secreto[j] and encontrado == False:
-                    semicorrectas += 1
-                    secreto_contado[j] = True
-                    encontrado = True
-
-        mal = 4 - correctas - semicorrectas
-        pistas = (['• (correcta)'] * correctas
-                  + ['o (semicorrecta)'] * semicorrectas
-                  + ['· (mal)'] * mal)
-        print('Pistas:', ' '.join(pistas))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+     intentos = []
+     palabra_actual = ''
+     for letra in codigo_usuario:
+         if letra !='':
+            palabra_actual = palabra_actual + letra
+         else:
+             if palabra_actual !='':
+                intentos.append(palabra_actual)
+                palabra_actual = ''
+                if len(intentos) !=4:
+                   print('El código debe tener exactamente cuatro colores.\n')
+                else:
+                   if codigo_usuario == codigo_secreto:
+                      print('felizidades has adivinado el codigo secreto.\n')
+                      intentos=0
+             else:
+                aciertos=0
+                for i in range(4):
+                 if codigo_usuario[i] == codigo_secreto[i]:
+                    aciertos = aciertos + 1
+                print('incorrecto. Has acertado',aciertos,'colores en su posición correcta.\n')
+                intentos = intentos -1
+                if intentos == 0:
+                   print('Te has quedado sin intentos. Has perdido')
