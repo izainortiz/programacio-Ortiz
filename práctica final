@@ -29,19 +29,35 @@ while intentos > 0:
 else:
     codigo_secreto = [False, False, False, False]  # Inicializar la lista de pistas
     codigo_usuario = [False, False, False, False]  # Inicializar la lista de pistas
-    correctas = 0    # bola negra
+    correctas = 0    # bola negra (•): el color y la posición son correctos
+    semicorrectas = 0 # bola blanca (o): el color es correcto pero la posición es incorrecta
+# Parte donde te dice lo que está en su sitio
+for i in range(4):
+    if codigo_secreto[i] == codigo_usuario[i]:
+        correctas += 1
+        codigo_secreto[i] = True
+        codigo_usuario[i] = True
+# Parte donde te dice lo que no está en su sitio
+for i in range(4):
+    if not codigo_usuario[i]:
+        for j in range(4):
+            if not codigo_secreto[j] and codigo_usuario[i] == codigo_secreto[j]:
+                semicorrectas += 1
+                codigo_secreto[j] = True
+                break
+            elif codigo_secreto[j]:
+                 pass
+#Parte donde te dice lo que está mal
+mal = 4 - correctas - semicorrectas # su simbolo es ·
 
-
-
-
-
-
-
-
-
-
-
-
+#Montaje de las pistas. Basicamente cuando fallas se te daran estas pistas.
+pistas = []
+for i in range(correctas):
+    pistas.append('• (correcta)')
+for i in range(semicorrectas):
+    pistas.append('o(semicorrecta)')
+for i in range(mal):
+    pistas.append('·(mal)')
 
 
 
