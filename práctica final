@@ -26,38 +26,38 @@ while intentos > 0:
         print('Lo siento, ese no es el código secreto. Intenta de nuevo.\n')
         intentos -= 1
         print('Te quedan', intentos, 'intentos.\n')
-else:
-    codigo_secreto = [False, False, False, False]  # Inicializar la lista de pistas
-    codigo_usuario = [False, False, False, False]  # Inicializar la lista de pistas
-    correctas = 0    # bola negra (•): el color y la posición son correctos
-    semicorrectas = 0 # bola blanca (o): el color es correcto pero la posición es incorrecta
-# Parte donde te dice lo que está en su sitio
-for i in range(4):
-    if codigo_secreto[i] == codigo_usuario[i]:
-        correctas += 1
-        codigo_secreto[i] = True
-        codigo_usuario[i] = True
-# Parte donde te dice lo que no está en su sitio
-for i in range(4):
-    if not codigo_usuario[i]:
-        for j in range(4):
-            if not codigo_secreto[j] and codigo_usuario[i] == codigo_secreto[j]:
-                semicorrectas += 1
-                codigo_secreto[j] = True
-                break
-            elif codigo_secreto[j]:
-                 pass
-#Parte donde te dice lo que está mal
-mal = 4 - correctas - semicorrectas # su simbolo es ·
+        # Separar los colores sin definir una función dentro del bucle.
+        secreto = codigo_secreto.split()
+        intento = codigo_usuario.lower().split()
+        if len(intento) != 4:
+            print('El código debe tener exactamente cuatro colores.\n')
+            continue
+        correctas = 0
+        semicorrectas = 0
+        secreto_contado = [False, False, False, False]
+        intento_correcto = [False, False, False, False]
 
-#Montaje de las pistas. Basicamente cuando fallas se te daran estas pistas.
-pistas = []
-for i in range(correctas):
-    pistas.append('• (correcta)')
-for i in range(semicorrectas):
-    pistas.append('o(semicorrecta)')
-for i in range(mal):
-    pistas.append('·(mal)')
+        # Primero contamos los colores en la posición correcta.
+        for i in range(4):
+            if intento[i] == secreto[i]:
+                correctas += 1
+                secreto_contado[i] = True
+                intento_correcto[i] = True
+
+        # Después contamos colores correctos en una posición distinta.
+        for i in range(4):
+            encontrado = False
+            for j in range(4):
+                if intento_correcto[i] == False and secreto_contado[j] == False and intento[i] == secreto[j] and encontrado == False:
+                    semicorrectas += 1
+                    secreto_contado[j] = True
+                    encontrado = True
+
+        mal = 4 - correctas - semicorrectas
+        pistas = (['• (correcta)'] * correctas
+                  + ['o (semicorrecta)'] * semicorrectas
+                  + ['· (mal)'] * mal)
+        print('Pistas:', ' '.join(pistas))
 
 
 
