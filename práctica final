@@ -37,7 +37,7 @@ while intentos > 0:
             palabra_actual = palabra_actual + letra
         else:
             if palabra_actual != '':
-                lista_usuario.append(palabra_actual) # He tenido que utilizar un código que no has enseñado. '.append ()' , se utiliza para poner lo que este dentro de los paréntesis al final de una lista que ya existe.(apare dos veces)
+                lista_usuario.append(palabra_actual) 
                 palabra_actual = ''
                 
     if palabra_actual != '':
@@ -63,3 +63,5 @@ while intentos > 0:
             intentos = intentos - 1
             if intentos == 0:
                 print('Te has quedado sin intentos. Has perdido.')
+                print('el codigo es')
+                input(codigo_secreto)
