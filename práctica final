@@ -1,10 +1,12 @@
 # Introducción al juego de adivinanza de números
-print(' Bienvenido a Mastermind')
+print('Bienvenido a Mastermind')
+
 # Iniciar el juego
 print('=== JUEGO MASTERMIND ===')
 input('Presiona Enter para comenzar')
+
 # El juego ya ha comenzado/reglamentos
-print('Reglas del juego.\n')
+print('---Reglas del juego---\n')
 print('Tienes 10 intentos para adivinar el número secreto entre 1 y 100.\n')
 print('Después de cada intento, recibirás pistas sobre si tu número es demasiado alto o demasiado bajo.\n')
 print('Tienes seis colores para elegir: rojo, azul, verde, amarillo, naranja y morado.\n')
@@ -35,13 +37,13 @@ while intentos > 0:
             palabra_actual = palabra_actual + letra
         else:
             if palabra_actual != '':
-                lista_usuario.append(palabra_actual) # He tenido que utilizar un código que no has enseñado. .append () , se utiliza para poner lo que este dentro de los paréntesis al final de una lista que ya existe.
+                lista_usuario.append(palabra_actual) # He tenido que utilizar un código que no has enseñado. '.append ()' , se utiliza para poner lo que este dentro de los paréntesis al final de una lista que ya existe.(apare dos veces)
                 palabra_actual = ''
                 
     if palabra_actual != '':
         lista_usuario.append(palabra_actual)
 
-    #comprueba como esta
+    #comprueba como está
     if len(lista_usuario) != 4:
         print('El código debe tener exactamente cuatro colores.\n')
     else:
